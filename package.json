@@ -1,0 +1,42 @@
+{
+  "name": "eaquequi",
+  "version": "1.0.0",
+  "description": "JS/CSS/HTML/JSON formatter with mapping for both browser (Web Worker) and Node.js (Worker Threads)",
+  "main": "",
+  "scripts": {
+    "dev": "sf d formatter",
+    "test": "node ./test/test.js",
+    "build-test": "node ./scripts/build-test.js",
+    "build-worker": "sf b worker,worker-node -p patch",
+    "build-formatter": "sf b formatter -p patch",
+    "build": "sf lint && npm run build-test && npm run build-worker && npm run build-formatter",
+    "patch": "npm run build && sf publish patch"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "keywords": [
+    "qui"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "console-grid": "^2.0.1",
+    "eight-colors": "^1.0.3",
+    "eslint": "^8.56.0",
+    "eslint-config-plus": "^1.0.6",
+    "eslint-plugin-html": "^7.1.0",
+    "js-beautify": "^1.14.11",
+    "koa": "^2.15.0",
+    "koa-static-resolver": "^1.0.4",
+    "lz-utils": "^2.0.1",
+    "playwright": "^1.40.1",
+    "stylelint": "^15.11.0",
+    "stylelint-config-plus": "^1.0.4"
+  },
+  "author": "JenniferUllrich",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GilbertWiza/eaquequi.git"
+  },
+  "homepage": "https://github.com/GilbertWiza/eaquequi.git"
+}
